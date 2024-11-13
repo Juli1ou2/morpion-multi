@@ -21,7 +21,7 @@ X_IMAGE = pygame.transform.scale(pygame.image.load("images/x.png"), (80, 80))
 O_IMAGE = pygame.transform.scale(pygame.image.load("images/o.png"), (80, 80))
 
 # Fonts
-END_FONT = pygame.font.SysFont('arial', 40)
+END_FONT = pygame.font.SysFont('Comic Sans Ms', 40)
 
 
 def draw_grid():

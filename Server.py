@@ -8,9 +8,9 @@ from ClientThread import ClientListener
 class Server():
 
     def __init__(self, port):
-        self.listener= socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        self.listener = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self.listener.bind(('', port))
-        self.listener.listen(1)
+        self.listener.listen(1) # 1 place dans la file d'attente
         print("Listening on port", port)
         self.clients_sockets= []
         signal.signal(signal.SIGINT, self.signal_handler)
@@ -46,7 +46,7 @@ class Server():
 
 
 if __name__ == "__main__":
-    server= Server(59001)
+    server = Server(59001)
     server.run()
 
 
